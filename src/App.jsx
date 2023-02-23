@@ -1,12 +1,13 @@
 import "./App.css";
-import PatitoDeGoma from "./components/PatitoDeGoma/PatitoDeGoma";
-import { ProductsContainer } from "./components/Products";
+import UserProvider from "./context/User/UserProvider";
+import { RouterPaths } from "./Routes/Router";
 
 function App() {
   return (
     <>
-      <PatitoDeGoma />
-      <ProductsContainer />
+      <UserProvider>
+        <RouterPaths />
+      </UserProvider>
     </>
   );
 }
