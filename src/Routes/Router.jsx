@@ -7,6 +7,7 @@ import ErrorPage from '../Pages/ErrorPage';
 import Navbar from '../components/Navbar/Navbar';
 import Login from '../Pages/Login';
 import CounterPage from '../Pages/CounterPage';
+import SearchPage from '../Pages/SearchPage';
 
 export const RouterPaths = () => {
   return (
@@ -19,6 +20,7 @@ export const RouterPaths = () => {
           <Route path="/*" element={<ErrorPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/counter" element={<CounterPage />} />
+          <Route path="/search" element={<SearchPage />} />
           {/* <Route path="/*" element={<Navigate to="/" />} /> */}
         </Routes>
       </BrowserRouter>
