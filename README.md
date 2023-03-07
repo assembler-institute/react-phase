@@ -75,5 +75,5 @@ This code was developed by Alex Balaguer at a live-coding 🙌💪
 
 | Contributor | Github profile
 | ------------------------| -----------------------------------------------------------------------|
-| [![](https://avatars.githubusercontent.com/u/46484161?v=4)](https://github.com/88jose) | [@88jose](https://github.com/88jose) |
+| [![](https://avatars.githubusercontent.com/u/46484161?s=90&v=4)](https://github.com/88jose) | [@88jose](https://github.com/88jose) |
 
