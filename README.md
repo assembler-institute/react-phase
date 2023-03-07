@@ -71,7 +71,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 ## 🔗 Authors
-This code was developed by Alex Balaguer at a live-coding 🙌💪
+This code was developed by Jose Torres at a live-coding 🙌💪
 
 | Contributor | Github profile
 | ------------------------| -----------------------------------------------------------------------|
