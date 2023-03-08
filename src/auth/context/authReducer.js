@@ -15,7 +15,6 @@ const authReducer = (state, action ) => {
                 isLogged: false,
                 }
         default: state;
-    
     }
 }
 
