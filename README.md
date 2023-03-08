@@ -1,25 +1,52 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
+    <img width="180" src="https://vitejs.dev/logo.svg" alt="Vite logo">
+  </a>
+</p>
+<br/>
+<p align="center">
+  <a href="https://npmjs.com/package/vite"><img src="https://img.shields.io/npm/v/vite.svg" alt="npm package"></a>
+  <a href="https://nodejs.org/en/about/releases/"><img src="https://img.shields.io/node/v/vite.svg" alt="node compatibility"></a>
+  <a href="https://github.com/vitejs/vite/actions/workflows/ci.yml"><img src="https://github.com/vitejs/vite/actions/workflows/ci.yml/badge.svg?branch=main" alt="build status"></a>
+  <a href="https://chat.vitejs.dev"><img src="https://img.shields.io/badge/chat-discord-blue?style=flat&logo=discord" alt="discord chat"></a>
+</p>
+<br/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# This app is created with Vite ⚡
 
-## Available Scripts
+> Next Generation Frontend Tooling
+
+- 💡 Instant Server Start
+- ⚡️ Lightning Fast HMR
+- 🛠️ Rich Features
+- 📦 Optimized Build
+- 🔩 Universal Plugin Interface
+- 🔑 Fully Typed APIs
+
+# Login, Logout  and private routes using Context and Reducer
+
+## Server App
+
+```bash
+$ git clone https://github.com/Jose1i1o/marvel-vs-dc.git
+```
+## Getting Started
+
+This project was bootstrapped with [Vite and React library](https://vitejs.dev/).
+
+### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm run dev`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,42 +56,49 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## License <!-- omit in toc -->
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[MIT](https://choosealicense.com/licenses/mit/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+________
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Notes for future live-coding
+_____________________________
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Paso 1. createContext. Saber si el usuario existe o no.
 
-### Code Splitting
+- [x] Crear dos directorios: types and context
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Paso 2. Crear el reducer y el createContext.
+- [x] Crear types login y logout
+- [x] Crear AuthContext. Only import createContext
+- [x] Crear AuthProvider.Provider
+- [x] Crear authReducer
+- [x] Crear nuestro useReducer en AuthProvider con initialState
+- [x] Export * from at index y luego hacerlo en el index general
+- [x] Luego importarlo y usarlo en HeroesApp
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Paso 3. Pasar valores al context Provider
+- [x] Explicar porque no enviar el dispatch
+- [x] Crear una función ‘login’ con action, type y payload + dispatch en el authProvider
+- [x] En el loginPage const { login } = useContext( AuthContext);
+- [x] Hacer lo mismo en el NavBar con user?.name
 
-### Making a Progressive Web App
+Paso 4. Init useReducer
+- [x] getLocalStorage AuthProvider y setItem
+- [x] Create logout function localStrage.removeItem and call action 
+Paso 5. Public Routes and Private Routes
+- [x] Private Routes const { logged } = useContext( AuthContext );
+  return ( logged )
+  ? children
+  : <Navigate to='/login' />
+- [x] Nest inside the element the PrivateRoutes
+- [x] Public Routes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Paso 6. Volver a la página donde estaba al recargar
+- [x] useLocation en privateRoutes
+- [x] En el loginPage recoger el lastPath y pasárselo en el loginPage
