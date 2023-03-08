@@ -1,6 +1,12 @@
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import AuthProvider from '../context/authProvider';
 
 export const LoginPage = () => {
+
+  const { user, isLogged } = useContext(AuthProvider);
+
+  console.log(user)
 
   const navigate = useNavigate();
 
