@@ -102,3 +102,12 @@ Paso 5. Public Routes and Private Routes
 Paso 6. Volver a la página donde estaba al recargar
 - [x] useLocation en privateRoutes
 - [x] En el loginPage recoger el lastPath y pasárselo en el loginPage
+
+
+
+## 🔗 Authors
+This code was developed by Jose Torres at a live-coding 🙌💪
+
+| Contributor | Github profile
+| ------------------------| -----------------------------------------------------------------------|
+| [![](https://avatars.githubusercontent.com/u/115942758?=90&v=4)](https://github.com/IuliiaNova) | [@IuliiaNova](https://github.com/IuliiaNova) |
