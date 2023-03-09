@@ -106,7 +106,7 @@ Paso 6. Volver a la página donde estaba al recargar
 
 
 ## 🔗 Authors
-This code was developed by Jose Torres at a live-coding 🙌💪
+This code was developed by Iuliia Nova at a live-coding 🙌💪
 
 | Contributor | Github profile
 | ------------------------| -----------------------------------------------------------------------|
